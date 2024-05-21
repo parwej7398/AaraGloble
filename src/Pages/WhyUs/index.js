@@ -39,15 +39,15 @@ const WhyUs = () => {
   return (
     <div className="p-5">
       <div className="lg:flex gap-5 items-center bg-[#ffffff] lg:px-[15%] lg:p-10">
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col lg:w-[50%] gap-3">
           <div className="flex items-center gap-3">
             <p className="h-1 w-11 bg-red-500"></p>
             <p className=" text-[#23306e] font-semibold">SKILLS</p>
           </div>
-          <p className="text-[#343a40] lg:text-4xl text-2xl font-bold drop-shadow-2xl">
+          <p className="text-[#343a40] lg:text-3xl text-2xl font-bold drop-shadow-2xl">
             Why Us
           </p>
-          <p className=" font-semibold">
+          <p>
             Aara Global is a pioneer and dynamic digital agency where you'll get
             a good range of solutions for digital marketing. We are experts deal
             in digital marketing and traditional digital advertising services
@@ -57,7 +57,7 @@ const WhyUs = () => {
             professionals provide customized and tailored solutions for digital
             marketing to satisfy different purposes of selling.
           </p>
-          <p className=" font-semibold">
+          <p>
             We are equipped with most advanced digital marketing tools which
             have brought the digital revolution. Our digital marketing experts
             organize the meeting with the clients to discuss their needs and
@@ -67,7 +67,7 @@ const WhyUs = () => {
             marketing. We focus on segmentation in order to avoid later problems
             and target the niche market easily.
           </p>
-          <p className=" font-semibold">
+          <p>
             We are dedicated to escalating our business clients to a new level
             of success. We aim at understanding your business needs at first
             before finding the most suitable marketing strategy. Each digital
@@ -84,10 +84,10 @@ const WhyUs = () => {
             </IconButton>
           </button>
         </div>
-        <div className="lg:grid lg:grid-cols-2  *:shadow-2xl *:border *:p-2 *:rounded-md gap-5 p-5">
+        <div className="lg:grid lg:grid-cols-2 gap-5 p-5">
           {categries?.map((event) => {
             return (
-              <div className="hover:shadow-2xl  hover:shadow-[#85abb9]">
+              <div className="hover:shadow-2xl shadow-2xl border p-2 rounded-md lg:w-60  hover:shadow-[#85abb9]">
                 <img src={event.images} alt="" className="animate-bounce" />
                 <p>{event.titles}</p>
                 <p>{event.paragraph}</p>
