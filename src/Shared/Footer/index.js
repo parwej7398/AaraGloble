@@ -8,26 +8,14 @@ import {
 } from "@mui/icons-material";
 import { IconButton } from "@mui/material";
 import React from "react";
+import { Link } from "react-router-dom";
+import img from "../../Assets/wave-top.png";
 
 const Footer = () => {
   return (
     <>
-      {/* <div>
-        <svg
-          class="mkdf-wavy-effect"
-          version="1.1"
-          xmlns="http://www.w3.org/2000/svg"
-          xmlnsxlink="http://www.w3.org/1999/xlink"
-          x="0px"
-          y="0px"
-          viewBox="0 0 1920 81.717"
-          enable-background="new 0 0 1920 81.717"
-          xmlspace="preserve"
-        >
-          <path d="M1920,0c0,0-109.246,46.107-316.333,67.334C1343.5,94,1137.095,77.238,999.167,67.5C854,57.25,637.662,24.697,541.709,18.834C375.334,8.666,147,11,0,37.875V0H1920L1920,0z"></path>
-        </svg>
-      </div> */}
-      <div className="lg:grid lg:grid-cols-3 bg-[#f7f7f7] lg:gap-5 max-lg:gap-10 z-50 max-lg:flex max-lg:flex-col p-[3%]">
+      <img src={img} alt="" className="animate-pulse max-lg:hidden" />
+      <div className="lg:grid lg:grid-cols-3 bg-[#ffffff] lg:gap-5 max-lg:gap-10 z-50 max-lg:flex max-lg:flex-col p-[3%]">
         <div className="flex flex-col gap-5">
           <div>
             <p className="text-xl font-semibold">About Company</p>
@@ -58,20 +46,56 @@ const Footer = () => {
           </div>
           <div className="flex gap-2">
             <div className="flex flex-col font-semibold gap-2">
-              <p>Search Engine Optimization (SEO)</p>
-              <p>Social Media Marketing (SMM)</p>
-              <p>Search Engine Marketing (SEM)</p>
-              <p>Pay Per Click (PPC) Campaign</p>
-              <p>Email Marketing</p>
-              <p>Exhibition & Signage Design Services</p>
+              <Link to={"/search_engine_optimization"}>
+                <p className="hover:text-red-400 ">
+                  Search Engine Optimization (SEO)
+                </p>
+              </Link>
+              <Link to={"/social_media_marketing"}>
+                <p className="hover:text-red-400 ">
+                  Social Media Marketing (SMM)
+                </p>
+              </Link>
+              <Link to={"/social_engine_marketing"}>
+                <p className="hover:text-red-400 ">
+                  Search Engine Marketing (SEM)
+                </p>
+              </Link>
+              <Link to={"/pay_per_click"}>
+                <p className="hover:text-red-400 ">
+                  Pay Per Click (PPC) Campaign
+                </p>
+              </Link>
+              <Link to={"/email_marketing"}>
+                <p className="hover:text-red-400 ">Email Marketing</p>
+              </Link>
+              <Link to={"/exhibition_and_signge_design"}>
+                <p className="hover:text-red-400 ">
+                  Exhibition & Signage Design Services
+                </p>
+              </Link>
             </div>
             <div className="flex flex-col font-semibold gap-2">
-              <p>Content Marketing</p>
-              <p>Graphic & Print Design</p>
-              <p>Social Media Design</p>
-              <p>Email Template Design</p>
-              <p>3D Modeling & Design</p>
-              <p>Promo Video production & Design</p>
+              <Link to={"/content_marketing"}>
+                <p className="hover:text-red-400 ">Content Marketing</p>
+              </Link>
+              <Link to={"/graphic_and_print_desion"}>
+                <p className="hover:text-red-400 ">Graphic & Print Design</p>
+              </Link>
+              <Link to={"/social_media_design"}>
+                <p className="hover:text-red-400 ">Social Media Design</p>
+              </Link>
+              <Link to={"/email_template_desion"}>
+                <p className="hover:text-red-400 ">Email Template Design</p>
+              </Link>
+              <Link to={"/3D_modeling_and_design"}>
+                <p className="hover:text-red-400 ">3D Modeling & Design</p>
+              </Link>
+              <Link to={"/promo_video_marketing"}>
+                <p className="hover:text-red-400 ">
+                  Promo Video production & Design
+                </p>
+              </Link>
             </div>
           </div>
         </div>
@@ -88,7 +112,7 @@ const Footer = () => {
               <IconButton>
                 <EditLocation />
               </IconButton>
-              <p>
+              <p className="hover:text-red-400 cursor-pointer">
                 B-7 Real Earth City Chinhat, Lucknow 226028, Uttar Pradesh,
                 India
               </p>
@@ -97,13 +121,22 @@ const Footer = () => {
               <IconButton>
                 <AttachEmail />
               </IconButton>
-              <p>info@aaratechnologies.com</p>
+              <p className="hover:text-red-400 cursor-pointer">
+                info@aaratechnologies.com
+              </p>
             </div>
             <div className="flex gap-2 items-center">
               <IconButton>
                 <Call />
               </IconButton>
-              <p> +91-8881108882, +91-8303171321</p>
+              <p>
+                <span className="hover:text-red-400 cursor-pointer">
+                  +91-8881108882,
+                </span>
+                <span className="hover:text-red-400 cursor-pointer">
+                  +91-8303171321
+                </span>
+              </p>
             </div>
 
             <div className="flex gap-5">
@@ -125,21 +158,34 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="flex shadow-inner shadow-slate-600 h-14 max-lg:hidden items-center  justify-between">
-        <p>2022 © AARA Global | All right reserved.</p>
-        <p className="flex gap-5">
-          <span>Privacy Policy</span> <span>Term & Conditions</span>
+      <div className="flex px-10 shadow-inner shadow-slate-600 h-14 max-lg:hidden items-center  justify-between">
+        <p className="hover:text-red-400 cursor-pointer">
+          2022 © AARA Global | All right reserved.
         </p>
-        <p>
-          <IconButton>
-            <Facebook />
-          </IconButton>
-          <IconButton>
-            <Twitter />
-          </IconButton>
-          <IconButton>
-            <Instagram />
-          </IconButton>
+        <p className="flex gap-5">
+          <span className="hover:text-red-400 cursor-pointer">
+            Privacy Policy
+          </span>{" "}
+          <span className="hover:text-red-400 cursor-pointer">
+            Term & Conditions
+          </span>
+        </p>
+        <p className="*:rounded-full *:bg-[#d6d6d6]  flex gap-5">
+          <Link to={"https://www.facebook.com/aaraglobal/"}>
+            <IconButton>
+              <Facebook />
+            </IconButton>
+          </Link>
+          <Link to={"/"}>
+            <IconButton>
+              <Twitter />
+            </IconButton>
+          </Link>
+          <Link to={"https://www.instagram.com/aara.global/?hl=en"}>
+            <IconButton>
+              <Instagram />
+            </IconButton>
+          </Link>
         </p>
       </div>
     </>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import img from "../../Assets/AboutUsImg.png";
 import seo from "../../Assets/seo aboutUs.webp";
 import seowhy from "../../Assets/seo why chooes.webp";
@@ -8,6 +8,16 @@ import MEENAKSHI_TIWARI from "../../Assets/Meenakshi.png";
 import OurPatner from "../../Pages/OurPartners";
 
 const AboutUs = () => {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "instant",
+    });
+  });
+  useEffect(() => {
+    document.title =
+      "About the leading Digital Marketing company - Aara Global. ";
+  }, []);
   const categroes = [
     {
       id: 1,

@@ -53,9 +53,7 @@ code {
       animation-timing-function: cubic-bezier(0,0,0.2,1);
   }
 }
-.animate-spin {
-  animation: spin 5s linear infinite;
-}
+
 @media (min-width: 1024px) {
   .text {
       line-height: 2;
@@ -65,4 +63,47 @@ code {
    
   }
 }
-
+ .waveMiddle {
+  animation: move_wave 10s linear infinite;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  animation-play-state: running;
+  animation-name: move_wave;
+  animation-timeline: auto;
+  animation-range-start: normal;
+  animation-range-end: normal;
+}
+@keyframes ping {
+  75%, 100% {
+      transform: scale(2);
+      opacity: 0;
+  }
+}
+.animate-ping {
+  animation: ping 3s cubic-bezier(0.1, 0, 0.5, 0.1) infinite;
+}
+@keyframes spin {
+  to {
+      transform: rotate(360deg);
+  }
+}
+.animate-spin {
+  animation: spin 15s linear infinite;
+}
+h1{
+  font-size: larger;
+}
+h2{
+  font-size: 40px;
+}
+h3{
+  font-size: 40px;
+  color: #7150d4;
+}
+strong{
+  color: #0d6dfc;
+}

@@ -92,7 +92,7 @@ const OurServices = () => {
   // console.log(categories);
   return (
     <div className="bg-[#fafafa] lg:p-10 flex flex-col gap-5">
-      <div className="text-center flex-col flex items-center">
+      <div className="text-center flex-col p-14 flex items-center">
         <div className="flex items-center gap-3">
           <p className="h-1 w-11 bg-red-500"></p>
           <p className=" text-[#23306e] font-semibold">SERVICES WE OFFER</p>
@@ -109,13 +109,21 @@ const OurServices = () => {
       <div className="lg:grid grid-cols-4 lg:px-[10%] p-2 max-lg:flex max-lg:flex-col lg:gap-10 gap-5">
         {categories.map((event) => {
           return (
-            <div
-              key={""}
-              onClick={() => navigate(event.path)}
-              className="border hover:shadow-xl hover:shadow-slate-500 overflow-hidden rounded-md shadow-lg p-3 bg-white flex flex-col items-center justify-center gap-5 h-48"
-            >
-              <img src={event.img} alt="" className="h-16 hover:animate-ping" />
-              <button className="font-semibold text-lg">{event.title}</button>
+            <div className="bg-teal-400  relative h-[13rem] w-[15rem] rounded-md">
+              <div
+                key={""}
+                onClick={() => navigate(event.path)}
+                className="border-2 absolute  hover:shadow-2xl h-[12.8rem] w-[14.8rem] hover:shadow-slate-500 overflow-hidden rounded-md shadow-lg p-3 bg-white flex flex-col items-center justify-center gap-5 "
+              >
+                <img
+                  src={event.img}
+                  alt=""
+                  className="h-16 hover:scale-125 duration-300 transition-all"
+                />
+                <button className="font-semibold text-lg drop-shadow-2xl">
+                  {event.title}
+                </button>
+              </div>
             </div>
           );
         })}

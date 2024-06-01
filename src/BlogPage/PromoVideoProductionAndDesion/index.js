@@ -1,16 +1,21 @@
 import React, { useEffect } from "react";
-import blogs from "../../Assets/Blog.png";
+import blogs from "../../Assets/Blogss.png";
 import sem from "../../Assets/sem (1).webp";
 import sem2 from "../../Assets/sem (2).webp";
 import { IconButton } from "@mui/material";
 import { ArrowDropDown } from "@mui/icons-material";
 import OurPatner from "../../Pages/OurPartners";
+import SideButton from "../../Components/SideButton";
 
 const PromoVideoMarketing = () => {
   useEffect(() => {
+    document.title =
+      "Best Video Marketing Company & Agency in India| AaraGlobal";
+  });
+  useEffect(() => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
+      behavior: "instant",
     });
   });
   const data = [
@@ -51,26 +56,40 @@ const PromoVideoMarketing = () => {
   ];
   return (
     <div className="lg:pt-20">
+      <SideButton />
       <div>
-        <img src={blogs} alt="" className="w-full max-lg:h-56 absolute" />
-        <div className="flex relative lg:top-32 lg:left-40 top-10 left-10 flex-col gap-4">
-          <div className="flex items-center gap-3">
-            <p className="h-1 w-11 bg-red-500"></p>
-            <p className=" text-[#23306e] font-semibold">AARA GLOBLE</p>
-          </div>
-          <p className="text-[#343a40] lg:text-4xl font-bold drop-shadow-2xl">
-            Promo Video production & Design
-          </p>
-          <div className="flex bg-[#bfc7d9] lg:*:font-semibold max-lg:text-xs border w-fit px-2 p-1 rounded-xl gap-1">
-            <p>Home</p>
-            <p>/</p>
-            <p className="text-[#fa702a]">
-              Promo Video production & Design (SEM)
-            </p>
-          </div>
+        <img src={blogs} alt="" className="w-full h-96 max-lg:h-56 absolute" />
+        <img
+          src={"https://aaraglobal.com/assets/images/shapes/wave-bot.png"}
+          alt=""
+          className="relative top-80 h-20 w-full animate-ping"
+        />
+        <img
+          src={"https://aaraglobal.com/assets/images/shapes/wave-mid.png"}
+          alt=""
+          className="relative top-60 h-20 w-full animate-ping"
+        />
+        <img
+          src={"https://aaraglobal.com/assets/images/shapes/wave-top.png"}
+          alt=""
+          className="relative top-44 h-20 w-full animate-ping"
+        />
+      </div>
+      <div className="flex relative -top-28  lg:left-40 max-lg:top-10 left-10 flex-col gap-4">
+        <div className="flex items-center gap-3">
+          <p className="h-1 w-11 bg-red-500"></p>
+          <p className=" text-[#23306e] font-semibold">AARA GLOBLE</p>
+        </div>
+        <p className="text-[#343a40] lg:text-4xl font-bold drop-shadow-2xl">
+          Promo Video production & Design
+        </p>
+        <div className="flex bg-[#bfc7d9] *:font-semibold border w-fit px-2 p-1 rounded-xl gap-1">
+          <p>Home</p>
+          <p>/</p>
+          <p className="text-[#fa702a]">Promo Video production & Design</p>
         </div>
       </div>
-      <div className="lg:flex lg:gap-5 lg:pt-96 pt-40 lg:px-[15%] lg:p-10 p-4 items-center">
+      <div className="lg:flex lg:gap-5 lg:pt-20 pt-40 lg:px-[15%] lg:p-10 p-4 items-center">
         <img src={sem} alt="" className="lg:h-[26rem]" />
         <div className="flex flex-col gap-3">
           <div className="flex items-center gap-3">

@@ -1,4 +1,4 @@
-import { Forward } from "@mui/icons-material";
+import { Email, Forward, Language } from "@mui/icons-material";
 import { IconButton } from "@mui/material";
 import React from "react";
 import expand from "../../Assets/eexpert_team.webp";
@@ -110,18 +110,29 @@ const WhyUs = () => {
             <img
               src="https://aaraglobal.com/assets/images/shapes/6.png"
               alt=""
-              className="h-16 max-lg:hidden animate-bounce"
+              className="h-12 max-lg:hidden animate-bounce"
             />
-            <input
-              type="text"
-              placeholder="Website Link Here"
-              className="border-2 p-3 rounded-2xl shadow-inner shadow-black w-80"
-            />
-            <input
-              type="email"
-              placeholder="Enter Your Name"
-              className="border-2 p-3 rounded-2xl shadow-inner shadow-black w-80"
-            />
+            <div className="flex justify-between border-2 p-1 rounded-2xl shadow-inner shadow-black w-80">
+              <input
+                type="text"
+                placeholder="Website Link Here...."
+                className="outline-none rounded-xl"
+              />
+              <IconButton>
+                <Language className="text-[#ff681c]" />
+              </IconButton>
+            </div>
+            <div className="flex justify-between border-2 p-1 rounded-2xl shadow-inner shadow-black w-80">
+              <input
+                type="email"
+                placeholder="Enter Your Email...."
+                className="outline-none rounded-xl"
+              />
+              <IconButton>
+                <Email className="text-[#ff681c]" />
+              </IconButton>
+            </div>
+
             <img
               src="https://aaraglobal.com/assets/images/shapes/5.png"
               alt=""

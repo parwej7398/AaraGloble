@@ -1,16 +1,21 @@
 import React, { useEffect } from "react";
-import blogs from "../../Assets/Blog.png";
+import blogs from "../../Assets/Blogss.png";
 import seo from "../../Assets/seo aboutUs.webp";
 import { IconButton } from "@mui/material";
 import { ArrowDropDown, CheckCircle } from "@mui/icons-material";
 import OurPatner from "../../Pages/OurPartners";
+import SideButton from "../../Components/SideButton";
 
 const Seo = () => {
   useEffect(() => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
+      behavior: "instant",
     });
+  });
+  useEffect(() => {
+    document.title =
+      "Best SEO Agency in India|Best SEO and Marketing Agency in India";
   });
   const categories = [
     {
@@ -60,9 +65,32 @@ const Seo = () => {
   ];
   return (
     <>
+      <SideButton />
       <div className="lg:pt-20">
-        <img src={blogs} alt="" className="w-full max-lg:h-56 absolute" />
-        <div className="flex relative lg:top-32 lg:left-40 top-10 left-10 flex-col gap-4">
+        <div>
+          <img
+            src={blogs}
+            alt=""
+            className="w-full h-96 max-lg:h-56 absolute"
+          />
+          <img
+            src={"https://aaraglobal.com/assets/images/shapes/wave-bot.png"}
+            alt=""
+            className="relative top-80 h-20 w-full animate-ping"
+          />
+          <img
+            src={"https://aaraglobal.com/assets/images/shapes/wave-mid.png"}
+            alt=""
+            className="relative top-60 h-20 w-full animate-ping"
+          />
+          <img
+            src={"https://aaraglobal.com/assets/images/shapes/wave-top.png"}
+            alt=""
+            className="relative top-44 h-20 w-full animate-ping"
+          />
+        </div>
+
+        <div className="flex relative -top-28  lg:left-40 max-lg:top-10 left-10 flex-col gap-4">
           <div className="flex items-center gap-3">
             <p className="h-1 w-11 bg-red-500"></p>
             <p className=" text-[#23306e] font-semibold">AARA GLOBLE</p>
@@ -77,7 +105,7 @@ const Seo = () => {
           </div>
         </div>
       </div>
-      <div className="lg:pt-80 lg:px-[16%]">
+      <div className="lg:pt-10 lg:px-[16%]">
         <div className="lg:flex gap-5 p-5 justify-center items-center">
           <img src={seo} alt="" className="h-[25rem]" />
           <div className="flex flex-col gap-5 ">
@@ -124,7 +152,7 @@ const Seo = () => {
         </p>
         <p>
           Search Engine Optimization allows your website to secure ranking on
-          the search engine pages. Following are some{" "}
+          the search engine pages. Following are some
           <span className="text-lg font-semibold">
             advantages of SEO services…
           </span>
@@ -253,7 +281,7 @@ const Seo = () => {
         <div className="grid lg:grid-cols-2 lg:gap-20 gap-5  lg:p-10 p-5">
           {categories.map((event) => {
             return (
-              <div className="flex flex-col shadow-xl bg-[#faf8f8] shadow-slate-400 gap-5 border p-3 font-semibold  rounded-se-3xl rounded-ee-3xl rounded-bl-3xl">
+              <div className="flex flex-col w-[31rem] shadow-xl bg-[#faf8f8] shadow-slate-400 gap-5 border p-3 font-semibold  rounded-se-3xl rounded-ee-3xl rounded-bl-3xl">
                 <p className="text-2xl">{event.title}</p>
                 <p>{event.paragaraph}</p>
                 <p>{event.paragaraph2}</p>

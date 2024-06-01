@@ -1,43 +1,59 @@
 import React, { useEffect } from "react";
-import blogs from "../../Assets/Blog.png";
+import blogs from "../../Assets/Blogss.png";
 import sem from "../../Assets/about_2.webp";
 import em2 from "../../Assets/em2.webp";
 import { IconButton } from "@mui/material";
 import { CheckCircle } from "@mui/icons-material";
 import OurPatner from "../../Pages/OurPartners";
+import SideButton from "../../Components/SideButton";
 
 const EmailMarketing = () => {
   useEffect(() => {
+    document.title =
+      "Email Marketing Services| Content Marketing|Scale your Business with email | AaraGlobal";
+  });
+  useEffect(() => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
+      behavior: "instant",
     });
   });
   return (
     <div>
-      <div className="lg:pt-20">
-        <img src={blogs} alt="" className="w-full max-lg:h-56 absolute" />
-        <div className="flex relative lg:top-32 lg:left-40 top-10 left-10 flex-col gap-4">
-          <div className="flex items-center gap-3">
-            <p className="h-1 w-11 bg-red-500"></p>
-            <p className=" text-[#23306e] font-semibold">AARA GLOBLE</p>
-          </div>
-          <p className="text-[#343a40] lg:text-4xl font-bold drop-shadow-2xl">
-            Email Marketing
-          </p>
-          <div className="flex bg-[#bfc7d9] *:font-semibold border w-fit px-2 p-1 rounded-xl gap-1">
-            <p>Home</p>
-            <p>/</p>
-            <p className="text-[#fa702a]">Email Marketing</p>
-          </div>
-        </div>
+      <SideButton />
+      <div>
+        <img src={blogs} alt="" className="w-full h-96 max-lg:h-56 absolute" />
         <img
-          src={"https://aaraglobal.com/assets/images/cross-icon.png"}
+          src={"https://aaraglobal.com/assets/images/shapes/wave-bot.png"}
           alt=""
-          className="relative max-lg:hidden top-32 left-[90%]"
+          className="relative top-80 h-20 w-full animate-ping"
+        />
+        <img
+          src={"https://aaraglobal.com/assets/images/shapes/wave-mid.png"}
+          alt=""
+          className="relative top-60 h-20 w-full animate-ping"
+        />
+        <img
+          src={"https://aaraglobal.com/assets/images/shapes/wave-top.png"}
+          alt=""
+          className="relative top-44 h-20 w-full animate-ping"
         />
       </div>
-      <div className="lg:flex max-lg:flex max-lg:flex-col-reverse gap-5 pt-40 p-4 lg:pt-64 lg:px-[15%] lg:p-10 items-center">
+      <div className="flex relative -top-20  lg:left-40 max-lg:top-10 left-10 flex-col gap-4">
+        <div className="flex items-center gap-3">
+          <p className="h-1 w-11 bg-red-500"></p>
+          <p className=" text-[#23306e] font-semibold">AARA GLOBLE</p>
+        </div>
+        <p className="text-[#343a40] lg:text-4xl font-bold drop-shadow-2xl">
+          Email Marketing
+        </p>
+        <div className="flex bg-[#bfc7d9] *:font-semibold border w-fit px-2 p-1 rounded-xl gap-1">
+          <p>Home</p>
+          <p>/</p>
+          <p className="text-[#fa702a]">Email Marketing</p>
+        </div>
+      </div>
+      <div className="lg:flex max-lg:flex max-lg:flex-col-reverse gap-5 pt-40 p-4 lg:pt-20 lg:px-[15%] lg:p-10 items-center">
         <div className="flex flex-col gap-3">
           <div className="flex items-center gap-3">
             <p className="h-1 w-11 bg-red-500"></p>

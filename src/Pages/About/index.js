@@ -1,9 +1,16 @@
 import { Forward } from "@mui/icons-material";
 import { IconButton } from "@mui/material";
-import React from "react";
+import React, { useEffect } from "react";
 import about from "../../Assets/about_2.webp";
+import { Link } from "react-router-dom";
 
 const About = () => {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "instant",
+    });
+  });
   return (
     <div className="lg:flex gap-5 bg-[#ffffff] items-center lg:px-[15%] lg:p-10 p-2">
       <div className="">
@@ -21,7 +28,7 @@ const About = () => {
             EXCLUSIVE DIGITAL MARKETING AGENCY
           </p>
         </div>
-        <p className="text-[#343a40] lg:text-4xl text-2xl font-bold drop-shadow-2xl">
+        <p className="text-[#262a2e] lg:text-4xl text-2xl font-bold drop-shadow-2xl">
           About Us
         </p>
 
@@ -42,12 +49,14 @@ const About = () => {
           optimization (SEO), pay-per-click (PPC) advertising, and social media
           marketing. Moreover, solutions are offered as per the precise need.
         </p>
-        <button className="border bg-[#f9f7f7] w-fit rounded-full px-1">
-          Read More{" "}
-          <IconButton>
-            <Forward className="!border !rounded-full !p-1" />
-          </IconButton>
-        </button>
+        <Link to={"/about_us"}>
+          <button className="border hover:bg-[#4d4949] hover:text-white bg-[#f9f7f7] w-fit rounded-full px-1">
+            Read More
+            <IconButton>
+              <Forward className="!border !bg-[#d9d9d9] size-10 !rounded-full !p-1" />
+            </IconButton>
+          </button>
+        </Link>
       </div>
     </div>
   );

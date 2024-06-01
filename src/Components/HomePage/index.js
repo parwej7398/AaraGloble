@@ -1,6 +1,6 @@
 import { Forward, PlayArrow } from "@mui/icons-material";
 import { IconButton } from "@mui/material";
-import React from "react";
+import React, { useEffect } from "react";
 import images from "../../Assets/rocket.webp";
 import About from "../../Pages/About";
 import WhyUs from "../../Pages/WhyUs";
@@ -9,6 +9,10 @@ import OurPatner from "../../Pages/OurPartners";
 import Testimonials from "../../Pages/Testimonials";
 
 const HomePage = () => {
+  useEffect(() => {
+    document.title =
+      "Best Digital Marketing Agency | Best SEO, SMO, SMM Company | Aara Global.";
+  }, []);
   return (
     <>
       <div className="lg:flex gap-5 lg:pt-40 lg:px-[15%] bg-[#f4f2fa] h-screen lg:p-10 p-2">

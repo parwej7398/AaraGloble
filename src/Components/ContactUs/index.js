@@ -4,6 +4,8 @@ import location from "../../Assets/Location.png";
 import { AttachEmail, Call, EditLocation, Forward } from "@mui/icons-material";
 import { IconButton } from "@mui/material";
 import logo from "../../Assets/aaraglobal-2.png";
+import aaratech from "../../Assets/aaratech.png";
+import aaracloud from "../../Assets/aaracloud2.png";
 import RecaptchaLogo from "../../Assets/RecaptchaLogo.svg.png";
 
 const ContactUs = () => {
@@ -19,7 +21,7 @@ const ContactUs = () => {
     {
       id: 1,
       title: "AARA Technologies",
-      Logo: logo,
+      Logo: aaratech,
       number: " +91 9266667999",
       email: "info@aaragroups.com",
       location:
@@ -28,7 +30,7 @@ const ContactUs = () => {
     {
       id: 1,
       title: "AARA Clouds",
-      Logo: logo,
+      Logo: aaracloud,
       number: " +91 9266667999",
       email: "info@aaragroups.com",
       location: " C-25, First Floor, Sector 8, Noida, 201301, (UP)",
@@ -60,7 +62,7 @@ const ContactUs = () => {
           className="lg:top-[25rem] top-[20rem] absolute z-10"
         />
         <div className="lg:flex justify-center lg:z-20 relative gap-10 lg:top-[35rem] top-[20rem] lg:px-[20%]">
-          <div className="lg:p-10 flex flex-col gap-4 bg-white border lg:rounded-xl shadow-2xl shadow-slate-500 lg:w-[40%] p-4">
+          <div className="lg:p-10 flex flex-col gap-4 bg-white bg-opacity-20 backdrop-blur border lg:rounded-xl shadow-2xl shadow-slate-500 lg:w-[40%] p-4">
             <div>
               <div className="flex items-center gap-3">
                 <p className="h-1 w-11 bg-red-500"></p>
@@ -117,7 +119,7 @@ const ContactUs = () => {
               </div>
             </div>
           </div>
-          <div className="lg:p-10 p-4 flex flex-col gap-4 bg-[#fcfcfc] border lg:rounded-xl shadow-2xl shadow-slate-500 lg:w-[60%]">
+          <div className="lg:p-10 p-4 flex flex-col gap-4 bg-[#fcfcfc] bg-opacity-20 backdrop-blur border lg:rounded-xl shadow-2xl shadow-slate-500 lg:w-[60%]">
             <div className="flex items-center gap-3">
               <p className="h-1 w-11 bg-red-500"></p>
               <p className=" text-[#23306e] font-semibold">GET IN TOUCH</p>

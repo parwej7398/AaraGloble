@@ -1,9 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import blogs from "../../Assets/Blog.png";
 import blogpost from "../../Assets/blog-post-image-guide.webp";
 import boy from "../../Assets/boy1.webp";
+import { axiosInstence } from "../../axios.config.js";
+import { useNavigate } from "react-router-dom";
 
 const Blogs = () => {
+  useEffect(() => {
+    document.title = "Blog";
+  });
+  const navigate = useNavigate();
+  const [data1, setData1] = useState();
+  const HandleClick = async () => {
+    const res = await axiosInstence.post("/blog/store-based-blog-list-api/", {
+      store_id: 1,
+    });
+    setData1(res.data.blog_list);
+    console.log(res);
+  };
   const categroes = [
     {
       id: 1,
@@ -70,6 +84,10 @@ const Blogs = () => {
       paragraph: "Sunt in culpa qui officia Read More..",
     },
   ];
+  useEffect(() => {
+    HandleClick();
+  }, []);
+  console.log(data1);
   return (
     <div className="overflow-x-hidden">
       <div>
@@ -90,12 +108,13 @@ const Blogs = () => {
         </div>
       </div>
       <div className="lg:flex  lg:pt-96 pt-32 lg:p-20 gap-10">
-        <div className="lg:grid grid-rows-4  lg:w-[70%]  gap-8">
-          {categroes.map((event) => {
+        <div className="lg:grid grid-rows-4  gap-8">
+          {data1?.map((event) => {
             return (
               <div
                 key={""}
                 className="flex border h-72 rounded shadow-xl p-5 items-center gap-5"
+                onClick={() => navigate(`/blogs/${event.id}`)}
               >
                 <img
                   src={event.images}
@@ -103,23 +122,23 @@ const Blogs = () => {
                   className="lg:h-44 h-16 rounded-2xl shadow-xl"
                 />
                 <div className="flex flex-col gap-2">
-                  <p className="text-2xl font-bold">{event.title}</p>
+                  <p className="text-2xl font-bold">{event.slug}</p>
                   <p className="bg-[#6b757d] text-white w-fit rounded-lg px-1">
-                    {event.date}
+                    {event.date_created}
                   </p>
-                  <p>{event.paragraph}</p>
+                  <p>{event.sub_title}</p>
                 </div>
               </div>
             );
           })}
         </div>
-        <div className="flex flex-col gap-5 lg:w-[25%]">
+        <div className="flex flex-col gap-5">
           <div className="border-2 p-4 shadow-inner rounded-xl">
             <p className="text-[#343a40] pl-20 text-3xl font-bold drop-shadow-2xl">
               Latest Blogs
             </p>
             <div>
-              {data.map((event) => {
+              {data1?.map((event) => {
                 return (
                   <div
                     key={""}
@@ -131,11 +150,11 @@ const Blogs = () => {
                       className="h-24 rounded-2xl shadow-xl"
                     />
                     <div className="flex flex-col gap-2">
-                      <p className="text-2xl font-bold">{event.title}</p>
+                      <p className="text-sm font-semibold">{event.title}</p>
                       <p className="bg-[#6b757d] text-white w-fit rounded-lg px-1">
-                        {event.date}
+                        {event.date_modified}
                       </p>
-                      <p>{event.paragraph}</p>
+                      {/* <p>{event.meta_description}</p> */}
                     </div>
                   </div>
                 );
@@ -164,7 +183,7 @@ const Blogs = () => {
           </div>
         </div>
       </div>
-      <div className="flex items-center pb-10 justify-center gap-10 text-center">
+      <div className="flex *:cursor-pointer items-center pb-10 justify-center gap-10 text-center">
         <p>«</p>
         <p>1</p>
         <p className="bg-[#e6e4e4] h-6 rounded w-6">2</p>
